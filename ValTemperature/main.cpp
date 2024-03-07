@@ -58,9 +58,9 @@ int main() {
 */
 
 
-    worker.join();
+    worker.detach();
     thread th1(Scrivi, ref(meteo));
-    th1.join();
+    th1.detach();
 
 
     Leggi();
